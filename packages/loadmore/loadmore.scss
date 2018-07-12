@@ -1,0 +1,16 @@
+@import '../style-common/index.scss';
+
+.v-loadmore {
+    position: relative;
+    overflow: hidden;
+}
+
+.v-loadmore-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+}

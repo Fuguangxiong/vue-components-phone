@@ -1,0 +1,77 @@
+@import '../style-common/index.scss';
+@import '../modal/modal.scss';
+
+.dialog-wrapper {
+    position: relative;
+    z-index: 11;
+}
+
+.dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    background: transparent;
+    z-index: 2;
+    transition: .3s;
+
+    &-content {
+        position: relative;
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        z-index: 1;
+
+        &__scrollable {
+            width: calc(100% + 1px);
+            max-height: 70vh;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+    }
+
+    &-footer {
+        margin-top: 20px;
+    }
+
+    &__cancel {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        font-size: 20px;
+        line-height: 27px;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        border: 1px solid #fff;
+        border-radius: 50%;
+    }
+
+    .is-position-top-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(100%, -100%);
+    }
+
+    .is-position-top-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-100%, -100%);
+    }
+
+    .is-position-bottom {
+        position: relative;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+.dialog-enter,
+.dialog-leave-to {
+    // top: -50%;
+    top: 0;
+    transform: translate(-50%, -100%);
+}

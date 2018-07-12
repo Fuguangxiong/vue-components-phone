@@ -1,0 +1,130 @@
+@import '../style-common/index.scss';
+@import '../icon/icon.scss';
+
+$button-default-color: #606266 !default;
+
+.v-button {
+    display: inline-block;
+    padding: 12px 20px;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #dcdfe6;
+    border-color: #dcdfe6;
+    color: $button-default-color;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    transition: .1s;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 4px;
+    letter-spacing: 0.21px;
+
+    &.is-bold {
+        font-weight: bold;
+    }
+
+    &.is-round {
+        border-radius: 20px;
+        padding: 12px 23px;
+    }
+
+    &.is-circle {
+        border-radius: 50%;
+        padding: 12px;
+    }
+
+    &.is-block {
+        display: block;
+        width: stretch;
+
+        & + & {
+            margin-top: 10px;
+            margin-left: 0px;
+        }
+    }
+
+    [class*=icon-] + span {
+        margin-left: 3px;
+    }
+
+    & + & {
+        // margin-top: 10px;
+        margin-left: 10px;
+    }
+}
+
+.v-button--primary {
+    color: #fff;
+    background-color: #409eff;
+    border-color: #409eff;
+
+    &.is-plain {
+        color: #409eff;
+        background: #ecf5ff;
+        border-color: #b3d8ff;
+    }
+}
+
+.v-button--success {
+    color: #fff;
+    background-color: #67c23a;
+    border-color: #67c23a;
+
+    &.is-plain {
+        color: #67c23a;
+        background: #f0f9eb;
+        border-color: #c2e7b0;
+    }
+}
+
+.v-button--info {
+    color: #fff;
+    background-color: #909399;
+    border-color: #909399;
+
+    &.is-plain {
+        color: #909399;
+        background: #f4f4f5;
+        border-color: #d3d4d6;
+    }
+}
+
+.v-button--warning {
+    color: #fff;
+    background-color: #e6a23c;
+    border-color: #e6a23c;
+
+    &.is-plain {
+        color: #e6a23c;
+        background: #fdf6ec;
+        border-color: #f5dab1;
+    }
+}
+
+.v-button--text {
+    border-color: transparent;
+    color: inherit;
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.v-button--danger {
+    color: #fff;
+    background-color: #f56c6c;
+    border-color: #f56c6c;
+
+    &.is-plain {
+        color: #f56c6c;
+        background: #fef0f0;
+        border-color: #fbc4c4;
+    }
+}
+
+.is-disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}

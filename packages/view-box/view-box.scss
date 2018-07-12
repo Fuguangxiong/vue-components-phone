@@ -1,0 +1,40 @@
+@import '../style-common/index.scss';
+
+$view-box-background: #fff;
+
+.view-box {
+    position: relative;
+    height: 100%;
+    max-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: $view-box-background;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    &-content {
+        position: relative;
+        height: 100%;
+        flex: 1;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        box-sizing: border-box;
+        z-index: 1;
+    }
+
+    &-header,
+    &-footer {
+        position: relative;
+        background: transparent;
+        z-index: 2;
+    }
+
+    &-header {
+        top: 0;
+    }
+
+    &-footer {
+        bottom: 0;
+    }
+}

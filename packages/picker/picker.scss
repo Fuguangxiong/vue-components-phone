@@ -1,0 +1,10 @@
+@import '../style-common/index.scss';
+
+.t-picker {
+    width: 100%;
+
+    &-items {
+        display: flex;
+        width: 100%;
+    }
+}

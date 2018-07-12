@@ -1,0 +1,47 @@
+@import '../style-common/index.scss';
+@import '../modal/modal.scss';
+
+.t-popup {
+    position: relative;
+    z-index: 11;
+
+    &-content {
+        position: fixed;
+        background: #fff;
+        overflow: auto;
+        z-index: 2;
+        transition: $transition;
+
+        &.is-transparent {
+            background-color: transparent;
+        }
+
+        &.is-top {
+            top: 0;
+            left: 0;
+            right: 0;
+            height: auto;
+        }
+
+        &.is-bottom {
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: auto;
+        }
+
+        &.is-left {
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: auto;
+        }
+
+        &.is-right {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: auto;
+        }
+    }
+}

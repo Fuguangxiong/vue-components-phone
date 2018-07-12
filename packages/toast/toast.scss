@@ -1,0 +1,53 @@
+@import '../style-common/index.scss';
+@import '../icon/icon.scss';
+
+.t-toast {
+    position: fixed;
+    // width: fit-content;
+    max-width: 80%;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    box-sizing: border-box;
+    z-index: 10;
+
+    &-header {
+        margin-bottom: 10px;
+        text-align: center;
+
+        &-icon {
+            font-size: 50px;
+            line-height: 50px;
+        }
+    }
+
+    &-content {
+        font-size: 14px;
+        text-align: center;
+
+        &-message {
+            margin: 0;
+            // white-space: normal;
+            // word-wrap: break-word;
+            // word-break: break-all;
+        }
+    }
+
+    &.is-place-top {
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    &.is-place-middle {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &.is-place-bottom {
+        bottom: 50px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}

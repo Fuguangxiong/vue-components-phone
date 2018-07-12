@@ -1,0 +1,103 @@
+@import '../style-common/index.scss';
+@import '../modal/modal.scss';
+
+.msgbox-wrapper {
+    position: relative;
+    z-index: 10;
+}
+
+.msgbox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    background: #fff;
+    overflow: hidden;
+    z-index: 2;
+    transition: .2s;
+}
+
+.msgbox-header {
+    padding: 15px 0 0;
+}
+
+.msgbox-title {
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+
+.msgbox-content {
+    padding: 10px 20px 15px;
+    border-bottom: 1px solid #ddd;
+    min-height: 36px;
+    position: relative;
+}
+
+.msgbox-message {
+    color: #999;
+    margin: 0;
+    text-align: center;
+    line-height: 36px;
+}
+
+.msgbox-input {
+    padding-top: 15px;
+
+    input {
+        border: 1px solid #dedede;
+        border-radius: 5px;
+        padding: 4px 5px;
+        width: 100%;
+        -webkit-appearance: none;
+        outline: none;
+        box-sizing: border-box;
+    }
+}
+
+.msgbox-btns {
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+}
+
+.msgbox-btn {
+    line-height: 35px;
+    display: block;
+    background-color: #fff;
+    flex: 1;
+    margin: 0;
+    border: 0;
+    outline: none;
+}
+
+.msgbox-cancel {
+    width: 50%;
+    border-right: 1px solid #ddd;
+}
+
+.msgbox-confirm {
+    color: #26a2ff;
+    width: 50%;
+}
+
+.bounce-enter-active {
+    animation: bounce-in .2s;
+}
+
+.bounce-leave-active {
+    animation: bounce-in .2s reverse;
+}
+
+@keyframes bounce-in {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

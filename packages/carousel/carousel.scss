@@ -1,0 +1,15 @@
+@import '../style-common/index.scss';
+
+.t-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    &-content {
+        display: flex;
+
+        &.is-column {
+            flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+@import '../style-common/index.scss';
+@import '../icon/icon.scss';
+
+$cell-padding-top: 10px;
+$cell-padding-bottom: 10px;
+$cell-padding-left: 15px;
+$cell-padding-right: 15px;
+
+.t-cell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: $cell-padding-top $cell-padding-right $cell-padding-bottom $cell-padding-left;
+    letter-spacing: 0.21px;
+    background: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    &-icon {
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        color: $color-primary;
+        font-size: 18px;
+        line-height: 1;
+    }
+
+    &-label {
+        flex: 1;
+        margin-right: 10px;
+        font-size: 17px;
+        line-height: 25px;
+        color: #000;
+        overflow: hidden;
+    }
+
+    &-value {
+        flex: 0 0 40%;
+        font-size: 16px;
+        line-height: 1;
+        color: #888;
+        text-align: right;
+        overflow: hidden;
+    }
+
+    &-link {
+        position: relative;
+        margin-left: 10px;
+        padding-right: 15px;
+        box-sizing: border-box;
+
+        &:after {
+            content: " ";
+            display: inline-block;
+            height: 8px;
+            width: 8px;
+            border-width: 2px 2px 0 0;
+            border-color: #c7c7c7;
+            border-style: solid;
+            -webkit-transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+            transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+            position: absolute;
+            top: 50%;
+            margin-top: -4px;
+        }
+    }
+
+    & + &:before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: $cell-padding-left;
+        right: 0;
+        height: 1px;
+        border-top: 1px solid RGBA(235, 235, 235, .7);
+        color: #d9d9d9;
+    }
+
+    .text-ellipsis {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
